@@ -5,7 +5,7 @@
 
 
 
-## サンプル視聴 : [JSUT 1000 Epoch sample](https://drive.google.com/file/d/1eCqdsr5KkUJVtlyuq34aFL9Os9D2ERBK/view?usp=share_link) / **生成時間 : 0.04002022743225098 [秒]**(A6000) ##
+## サンプル視聴 : [JSUT 1000 Epoch sample](https://drive.google.com/file/d/1eCqdsr5KkUJVtlyuq34aFL9Os9D2ERBK/view?usp=share_link) / **生成時間 : 約0.04[秒]**(A6000) ##
 
 
 <img src="./fig/proposed_model.png" width="100%">
