@@ -12,6 +12,8 @@
 
 ## 1. 環境構築
 
+Anacondaによる実行環境構築を想定します。
+
 0. Anacondaで"MB-iSTFT-VITS"という名前の仮想環境を作成する。[y]or nを聞かれたら[y]を入力する。
     ```sh
     conda create -n MB-iSTFT-VITS python=3.8    
