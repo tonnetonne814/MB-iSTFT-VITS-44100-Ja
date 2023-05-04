@@ -116,13 +116,22 @@ def inference(args):
         # save audio
         if args.is_save is True:
             n_save += 1
-            save_path = os.path.join(save_dir, str(n_save).zfill(3)+f"{text}.wav")
             data = audio
-            sf.write(
+            try:
+                save_path = os.path.join(save_dir, str(n_save).zfill(3)+f"_{text}.wav")
+                sf.write(
                      file=save_path,
                      data=data,
                      samplerate=hps.data.sampling_rate,
                      format="WAV")
+            except:
+                save_path = os.path.join(save_dir, str(n_save).zfill(3)+f"_{text[:10]}〜.wav")
+                sf.write(
+                     file=save_path,
+                     data=data,
+                     samplerate=hps.data.sampling_rate,
+                     format="WAV")
+
             print(f"Audio is saved at : {save_path}")
 
 
