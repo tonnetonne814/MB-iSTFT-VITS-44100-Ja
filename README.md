@@ -12,7 +12,7 @@
 
 ## 1. 環境構築
 
-Anacondaによる実行環境構築を想定します。
+Anacondaによる実行環境構築を想定する。
 
 0. Anacondaで"MB-iSTFT-VITS"という名前の仮想環境を作成する。[y]or nを聞かれたら[y]を入力する。
     ```sh
@@ -135,7 +135,9 @@ Terminal上にて使用するデバイスを選択後、テキストを入力す
 ## 事前学習モデル
 JSUTコーパスを1000Epoch(64Batch)学習したモデルです。以下よりダウンロードできます。
 
-**ダウンロード：** [JSUT_1000Epoch_64Batch](https://drive.google.com/file/d/10I3dYkeVhzox1lxX1Tg_tAKQMtHkYCI0/view?usp=share_link)
+**ダウンロード：** 
+- [JSUT_1000Epoch_64Batch](https://drive.google.com/file/d/10I3dYkeVhzox1lxX1Tg_tAKQMtHkYCI0/view?usp=share_link)
+- [JSUT_240ksteps_+2_uprate](https://drive.google.com/file/d/1ZXC8mc_obWXKeQ7Vn5RrYdyjINbAWyEN/view?usp=share_link)
 
 ## 付録
 - FullBand化におけるMB-iSTFT-VITSの定周波ノイズについて。
