@@ -1,0 +1,10 @@
+Cython
+librosa==0.8.0
+matplotlib
+numpy
+phonemizer
+scipy
+tensorboard
+Unidecode
+pyopenjtalk==0.2.0
+soundcard 
