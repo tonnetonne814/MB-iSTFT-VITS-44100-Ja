@@ -5,7 +5,7 @@
 
 
 
-## サンプル視聴 : [JSUT 1000 Epoch sample](https://drive.google.com/file/d/1eCqdsr5KkUJVtlyuq34aFL9Os9D2ERBK/view?usp=share_link) / **生成時間 : 約0.04[秒]**(A6000) ##
+## サンプル視聴 : [JSUT 2000 Epoch sample](https://drive.google.com/file/d/1rfkmZHb9VFbs9AzRx4wqCVLEaYZatGyG/view?usp=share_link) / **生成時間 : 約0.04[秒]**(A6000) ##
 
 
 <img src="./fig/proposed_model.png" width="100%">
@@ -133,10 +133,9 @@ Terminal上にて使用するデバイスを選択後、テキストを入力す
 ファインチューニングを行う場合は、生成器モデルのcheckpointをG_finetune.pth、識別器モデルのcheckpointsをD_finetune.pthに名前を変更し、config.jsonで記述しているfinetune_model_dirフォルダ内へと配置する。その後、「4. 学習」のコマンドで学習を開始することで、ファインチューニングを行うことが出来ます。ファインチューニングの際には**事前学習モデルを使用する**のがオススメです。
 
 ## 事前学習モデル
-JSUTコーパスを1000Epoch(64Batch)学習したモデルです。以下よりダウンロードできます。
-
 **ダウンロード：** 
 - [JSUT_1000Epoch_64Batch](https://drive.google.com/file/d/10I3dYkeVhzox1lxX1Tg_tAKQMtHkYCI0/view?usp=share_link)
+- [JSUT_2000Epoch_64Batch](https://drive.google.com/file/d/1Us6l-zDmz4TDZcfP9Dzg1xCSWamF7Y6Y/view?usp=share_link)
 - [JSUT_240ksteps_+2_uprate](https://drive.google.com/file/d/1ZXC8mc_obWXKeQ7Vn5RrYdyjINbAWyEN/view?usp=share_link)
 
 ## 付録
