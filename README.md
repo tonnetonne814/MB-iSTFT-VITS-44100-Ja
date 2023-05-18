@@ -91,7 +91,7 @@ Anacondaによる実行環境構築を想定する。
 |:-----:|:-----------------:|:---------------------------------------------------------:|
 | train | log_interval      | 指定ステップ毎にロスを算出し記録する                      |
 | train | eval_interval     | 指定ステップ毎にモデル評価を行う                          |
-| train | epochs            | 指定ステップ毎にモデル保存を行う                          |
+| train | epochs            | 学習データ全体を学習する回数                          |
 | train | batch_size        | 一度のパラメータ更新に使用する学習データ数                |
 | train | finetune_model_dir| ファインチューニング用のcheckpointsが入っているフォルダ   |
 | data  | training_files    | 学習用filelistのテキストパス                              |
