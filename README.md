@@ -134,8 +134,7 @@ Terminal上にて使用するデバイスを選択後、テキストを入力す
 
 ## 事前学習モデル
 **ダウンロード：** 
-- [JSUT_1000Epoch_64Batch](https://drive.google.com/file/d/10I3dYkeVhzox1lxX1Tg_tAKQMtHkYCI0/view?usp=share_link)
-- [JSUT_2000Epoch_64Batch](https://drive.google.com/file/d/1Us6l-zDmz4TDZcfP9Dzg1xCSWamF7Y6Y/view?usp=share_link)
+- [JSUT_2000Epoch_64Batch](https://drive.google.com/file/d/15PK5k9IcwDjUJpf1ERjPLC8db9cf1XPy/view?usp=share_link)
 - [JSUT_240ksteps_+2_uprate](https://drive.google.com/file/d/1ZXC8mc_obWXKeQ7Vn5RrYdyjINbAWyEN/view?usp=share_link)
 
 ## 付録
