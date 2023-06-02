@@ -49,7 +49,7 @@ def inference(args):
         len(symbols),
         hps.data.filter_length // 2 + 1,
         hps.train.segment_size // hps.data.hop_length,
-        **hps.model).cuda()
+        **hps.model).to(device)
     _ = net_g.eval()
     _ = utils.load_checkpoint(G_model_path, net_g, None)
 
@@ -71,8 +71,8 @@ def inference(args):
         stn_phn = pyopenjtalk_g2p_prosody("速度計測のためのダミーインプットです。")
         stn_tst = get_text(stn_phn, hps)
         # generate audio
-        x_tst = stn_tst.cuda().unsqueeze(0)
-        x_tst_lengths = torch.LongTensor([stn_tst.size(0)]).cuda()
+        x_tst = stn_tst.to(device).unsqueeze(0)
+        x_tst_lengths = torch.LongTensor([stn_tst.size(0)]).to(device)
         audio = net_g.infer(x_tst, 
                             x_tst_lengths, 
                             noise_scale=noise_scale, 
@@ -88,7 +88,8 @@ def inference(args):
             break
         
         # measure the execution time 
-        torch.cuda.synchronize()
+        if device=="cuda:0":
+            torch.cuda.synchronize()
         start = time.time()
 
         # required_grad is False
@@ -97,8 +98,8 @@ def inference(args):
             stn_tst = get_text(stn_phn, hps)
 
             # generate audio
-            x_tst = stn_tst.cuda().unsqueeze(0)
-            x_tst_lengths = torch.LongTensor([stn_tst.size(0)]).cuda()
+            x_tst = stn_tst.to(device).unsqueeze(0)
+            x_tst_lengths = torch.LongTensor([stn_tst.size(0)]).to(device)
             audio = net_g.infer(x_tst, 
                                 x_tst_lengths, 
                                 noise_scale=noise_scale, 
@@ -106,7 +107,8 @@ def inference(args):
                                 length_scale=length_scale)[0][0,0].data.cpu().float().numpy()
 
         # measure the execution time 
-        torch.cuda.synchronize()
+        if device=="cuda:0":
+            torch.cuda.synchronize()
         elapsed_time = time.time() - start
         print(f"Gen Time : {elapsed_time}")
         
